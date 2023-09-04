@@ -2,23 +2,20 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: postgres
-  password: 1234
 
 development:
   <<: *default
   database: E_commerce_api_development
+  username: postgres
+  password: 1234
 
 test:
   <<: *default
   database: E_commerce_api_test
+  username: postgres
+  password: 1234
 
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
-  database: <%= ENV['PGDATABASE'] %>
-  host: <%= ENV['PGHOST'] %>
-  port: <%= ENV['PGPORT'] %>
-  username: <%= ENV['PGUSER'] %>
-  password: <%= ENV['PGPASSWORD'] %>
-
+ 
