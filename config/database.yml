@@ -17,5 +17,5 @@ production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
   database: E_commerce_api_production
-  username: E_commerce_api
-  password: <%= ENV["E_COMMERCE_API_DATABASE_PASSWORD"] %>
+  username: railwayapp
+  password: <%= ENV["RAILWAYAPP_DATABASE_PASSWORD"] %>
